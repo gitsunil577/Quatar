@@ -81,7 +81,7 @@ export default function Services() {
     <section className="bg-[#FFFFFF] pt-[60px] sm:pt-[80px] pb-[60px] sm:pb-[80px] px-4 sm:px-6 lg:px-10 w-full">
 
       {/* Heading */}
-      <div className="flex flex-col items-center mb-12 sm:mb-16 w-full max-w-[1280px] mx-auto px-4 sm:px-8 gap-6 sm:gap-8">
+      <div className="flex flex-col items-center mb-12 sm:mb-16 w-full max-w-[1440px] mx-auto gap-6 sm:gap-8">
 
         {/* Badge */}
         <button
@@ -122,7 +122,7 @@ export default function Services() {
           sm:grid-cols-2
           lg:grid-cols-3
           gap-8
-          max-w-[1280px]
+          max-w-[1440px]
           mx-auto
           place-items-center
         "
@@ -275,7 +275,7 @@ export default function Services() {
       </div>
 
       {/* Newsletter Section */}
-      <div className="max-w-[1320px] mx-auto mt-24 rounded-[32px] bg-[#FFFFFF] px-8.5 py-8.5 sm:px-10 lg:px-14 flex flex-col
+      <div className="max-w-[1440px] mx-auto mt-24 rounded-[32px] bg-[#FFFFFF] px-8 py-8 sm:px-10 lg:px-12 flex flex-col
           lg:flex-row
           items-start
           lg:items-center

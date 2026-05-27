@@ -10,7 +10,7 @@ function Footer() {
       <div
         className="
           w-full
-          max-w-[1640px]
+          max-w-[1440px]
           min-h-[557px]
           mx-auto
           rounded-[40px]
@@ -73,7 +73,7 @@ function Footer() {
                     leading-[100%]
                     tracking-[-1.8px]
                     text-white
-                    font-[sfpro]
+                    font-sfpro
                   "
                 >
                   Let&apos;s Create Jobs
@@ -86,7 +86,7 @@ function Footer() {
                     leading-[24px]
                     text-[#94A3B8]
                     max-w-[560px]
-                    font-[sfpro]
+                    font-sfpro
                   "
                 >
                   Design amazing digital experiences that create more happy in
@@ -135,7 +135,7 @@ function Footer() {
                         text-[16px]
                         font-medium
                         text-white
-                        font-[sfpro]
+                        font-sfpro
                         leading-[22px]
                       "
                     >
@@ -163,7 +163,7 @@ function Footer() {
                     leading-[20px]
                     text-[#BBBBBB]
                     font-light
-                    font-[sfpro]
+                    font-sfpro
                   "
                 >
                   Yatra Online Freight Services Pvt Ltd, Gulf Adiba,

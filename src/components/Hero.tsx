@@ -47,19 +47,12 @@ function Hero() {
           ></div>
 
           {/* Content */}
-          <div
-            className="
-              relative
-              z-10
-              flex
-              items-center
-              h-full
-            "
-          >
-            
-            {/* Container */}
-            <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-              
+          <div className="relative z-10 flex items-center h-full w-full">
+
+            {/* Alignment container — identical to navbar:
+                no padding on outer, px lives on the max-w element */}
+            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+
               {/* Text Content */}
               <div className="w-full max-w-[676px]">
 
@@ -87,7 +80,7 @@ function Hero() {
                 <p
                   className="
                     w-full
-                    font-[inter]
+                    font-inter
                     font-normal
                     text-[17px]
                     sm:text-[18px]
@@ -136,24 +129,27 @@ function Hero() {
       </section>
 
       {/* Video Section */}
-      <section className="px-3 sm:px-5 lg:px-7 py-8">
-        
-        <video
-          autoPlay
-          loop
-          muted
-          controls
-          className="
-            w-full
-            h-[260px]
-            sm:h-[420px]
-            lg:h-[700px]
-            object-cover
-            rounded-[28px]
-          "
-        >
-          <source src="/video.mp4" type="video/mp4" />
-        </video>
+      <section className="py-8">
+
+        {/* Identical to navbar: px on the max-w container, not the outer section */}
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+          <video
+            autoPlay
+            loop
+            muted
+            controls
+            className="
+              w-full
+              h-[260px]
+              sm:h-[420px]
+              lg:h-[700px]
+              object-cover
+              rounded-[28px]
+            "
+          >
+            <source src="/video.mp4" type="video/mp4" />
+          </video>
+        </div>
 
       </section>
     </>

@@ -18,22 +18,23 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-[#F7F7F7] py-3 relative z-50">
 
-      {/* Main Container */}
+      {/* Main Container — 3-column grid: logo | links | buttons */}
       <div
         className="
           max-w-[1440px]
           mx-auto
           px-4
           sm:px-6
-          lg:px-6
-          flex
+          lg:px-10
+          grid
+          grid-cols-[auto_1fr_auto]
           items-center
-          justify-between
           h-[54px]
+          gap-4
         "
       >
 
-        {/* Logo */}
+        {/* Col 1 — Logo (anchors left edge) */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
             src="/Logo.png"
@@ -44,8 +45,8 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-8">
+        {/* Col 2 — Desktop Nav Links (centered in remaining space) */}
+        <div className="hidden lg:flex items-center justify-center gap-6 overflow-hidden">
 
           {navLinks.map((link) => (
             <Link
@@ -54,7 +55,7 @@ export default function Navbar() {
               className="
                 flex items-center gap-1
                 text-[16px] font-light leading-[100%] tracking-[0.01em]
-                text-[#4B4B4B] transition-all whitespace-nowrap
+                text-[#4B4B4B] transition-all whitespace-nowrap shrink-0
               "
             >
               {link.label}
@@ -64,7 +65,7 @@ export default function Navbar() {
 
           <button
             className="
-              flex items-center gap-1
+              flex items-center gap-1 shrink-0
               px-3 py-1 rounded-[8px]
               bg-white border border-[#E5E5E5] shadow-sm
               text-[16px] font-light leading-[100%] tracking-[0.01em]
@@ -75,21 +76,24 @@ export default function Navbar() {
             <Image src="/Frame.svg" width={12} height={12} alt="" />
           </button>
 
-          <Link href="#silicon-oasis" className="text-[16px] font-light text-[#4B4B4B] whitespace-nowrap">
+          <Link href="#silicon-oasis" className="text-[16px] font-light text-[#4B4B4B] whitespace-nowrap shrink-0">
             Silicon Oasis
           </Link>
 
-          <Link href="#csr" className="text-[16px] font-light text-[#4B4B4B] whitespace-nowrap">
+          <Link href="#csr" className="text-[16px] font-light text-[#4B4B4B] whitespace-nowrap shrink-0">
             CSR
           </Link>
 
-          <Link href="#ai" className="text-[16px] font-light text-[#4B4B4B] whitespace-nowrap">
+          <Link href="#ai" className="text-[16px] font-light text-[#4B4B4B] whitespace-nowrap shrink-0">
             AI
           </Link>
         </div>
 
-        {/* Right Side */}
-        <div className="flex items-center gap-3 shrink-0">
+        {/* Col 2 spacer on mobile (keeps col 3 pushed right) */}
+        <div className="lg:hidden" />
+
+        {/* Col 3 — Right Buttons (anchors right edge) */}
+        <div className="flex items-center gap-3 shrink-0 justify-end">
 
           {/* Login — hidden on small mobile */}
           <Button
