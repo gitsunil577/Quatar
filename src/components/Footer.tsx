@@ -10,8 +10,8 @@ function Footer() {
       <div
         className="
           w-full
-          max-w-[1440px]
-          min-h-[557px]
+          max-w-[1390px]
+          max-h-[580px]
           mx-auto
           rounded-[40px]
           lg:rounded-[54px]
@@ -103,13 +103,14 @@ function Footer() {
                   rounded-[10px]
                   border-[5px]
                   border-[#6C4F3C]
-                  bg-gradient-to-b
-                  from-[#4B3425]
-                  to-[#2B1C14]
+                 bg-gradient-to-t
+                from-[#6C4F3C]
+                 to-[#2D2017]
                   text-white
                   text-[16px]
                   font-medium
                   flex
+                  font-sfpro
                   items-center
                   justify-center
                   transition-all
@@ -119,7 +120,7 @@ function Footer() {
                   hover:to-orange-600
                 "
               >
-                ✨ Get Started
+                ✦ Get Started
               </Button>
 
               {/* Address */}
@@ -263,11 +264,11 @@ function Footer() {
                 >
 
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-white font-geist">
                       Content
                     </h2>
 
-                    <p className="text-[#71717A] text-[14px] mt-2">
+                    <p className="text-[#71717A] text-[14px] mt-2 font-geist">
                       Webdesign & Software Entwicklung
                     </p>
                   </div>
@@ -280,11 +281,15 @@ function Footer() {
                       py-2
                       rounded-full
                       border
-                      border-[#5A3A16]
+                      border-[#FD7C03]/20
+
+                      border-[1px]
                       bg-[#1A1208]
-                      text-[#F59E0B]
+                      text-[#D48300]/70
                       text-[13px]
                       whitespace-nowrap
+                      font-geist
+                      font-normal
                     "
                   >
                     🔸 What are you waiting for?
@@ -300,6 +305,7 @@ function Footer() {
                     lg:grid-cols-4
                     gap-x-10
                     gap-y-4
+                    font-sfpro
                   "
                 >
 

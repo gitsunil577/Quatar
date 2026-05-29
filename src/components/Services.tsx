@@ -78,20 +78,34 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-[#FFFFFF] pt-[60px] sm:pt-[80px] pb-[60px] sm:pb-[80px] px-4 sm:px-6 lg:px-10 w-full">
+    <section className="
+    w-full
+    bg-[#FFFFFF]
+
+    pt-[60px]
+    sm:pt-[80px]
+
+    pb-[60px]
+    sm:pb-[80px]
+
+    px-4
+    sm:px-6
+    lg:px-8
+  ">
 
       {/* Heading */}
-      <div className="flex flex-col items-center mb-12 sm:mb-16 w-full max-w-[1440px] mx-auto gap-6 sm:gap-8">
+      <div className="flex flex-col items-center mb-12 sm:mb-16 w-full max-w-[1200px] mx-auto gap-6 sm:gap-8">
 
         {/* Badge */}
         <button
           className="
-            px-4 py-1.5
+            px-4 mt-2
             rounded-full
             border border-[#E7D9B9]
             bg-white
             text-[#5F554B]
-            text-sm font-medium
+            text-sm font-semibold
+            font-bricolage
           "
         >
           Services
@@ -100,11 +114,11 @@ export default function Services() {
         {/* Main Heading */}
         <h1
           className="
-            mt-5
-            text-3xl
+            mt-1
+            text-[20px]
             font-[Helvetica]
-            sm:text-4xl
-            md:text-5xl
+            sm:text-[30px]
+            md:text-[40px]
             font-bold
             text-[#0F2742]
             text-center
@@ -115,112 +129,158 @@ export default function Services() {
       </div>
 
       {/* Cards Grid */}
+<div
+  className="
+    grid
+    grid-cols-1
+    sm:grid-cols-2
+    lg:grid-cols-3
+
+    gap-x-6
+    gap-y-8
+
+    w-full
+    max-w-[1200px]
+
+    mx-auto
+
+    px-4
+    sm:px-6
+    lg:px-8
+
+    justify-items-center
+  "
+>
+  {services.map((service, index) => (
+    <div
+      key={index}
+      className="
+        relative
+        w-full
+        max-w-[400px]
+        h-[450px]
+
+        rounded-[36px]
+        overflow-hidden
+
+        transition-all
+        duration-300
+      "
+    >
+      {/* Frame Background */}
+      <Image
+        src={index % 2 === 0 ? "/Frame1.png" : "/Frame2.png"}
+        alt=""
+        fill
+        className="object-cover"
+        priority={index < 3}
+      />
+
+      {/* Card Content */}
       <div
         className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-3
-          gap-8
-          max-w-[1440px]
-          mx-auto
-          place-items-center
+          relative
+          z-10
+
+          flex
+          flex-col
+          items-center
+          justify-between
+
+          h-full
+          w-full
+
+          px-6
+          py-10
         "
       >
-        {services.map((service, index) => (
-          <div
-            key={index}
+        {/* Top Content */}
+        <div
+          className="
+            flex
+            flex-col
+            items-center
+
+            w-full
+
+            gap-6
+          "
+        >
+          {/* Title */}
+          <h2
             className="
-              relative
-              w-full
-              max-w-[410px]
-              h-[620px]
-              rounded-[36px]
-              overflow-hidden
-              transition-all
-              duration-300
+              text-[28px]
+              sm:text-[30px]
+
+              leading-[1.1]
+
+              font-semibold
+              font-bricolage
+
+              text-center
+              text-[#23272F]
+
+              max-w-[280px]
             "
           >
-            {/* Frame Background */}
+            {service.title}
+          </h2>
+
+          {/* Image */}
+          <div
+            className="
+              flex
+              items-center
+              justify-center
+
+              w-full
+              h-[180px]
+            "
+          >
             <Image
-              src={index % 2 === 0 ? "/Frame1.png" : "/Frame2.png"}
-              alt=""
-              fill
-              className="object-cover"
-              priority={index < 3}
+              src={service.image}
+              alt={service.title}
+              width={250}
+              height={250}
+              className="
+                object-contain
+
+                w-[180px]
+                h-[180px]
+
+                sm:w-[220px]
+                sm:h-[220px]
+              "
             />
-
-            {/* Card Content */}
-            <div className="relative z-10 flex flex-col items-center justify-between h-full px-8.5 py-11 gap-2.5">
-
-              {/* Top Content */}
-              <div className="flex flex-col items-center w-[343px] h-[496px] gap-8.5">
-
-                {/* Title */}
-                <h2
-                  className="
-                    text-[42px]
-                    leading-[1.1]
-                    font-bold
-                    font-bricolage
-                    text-center
-                    text-[#23272F]
-                    max-w-[300px]
-                    min-h-[100px]
-                    flex
-                    items-center
-                    justify-center
-                  "
-                >
-                  {service.title}
-                </h2>
-
-                {/* Image */}
-                <div
-                  className="
-                    flex
-                    items-center
-                    justify-center
-                    mt-10
-                    mb-10
-                    w-[223px]
-                    h-[250px]
-                  "
-                >
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={260}
-                    height={260}
-                    className="
-                      object-contain
-                      w-[220px]
-                      h-[220px]
-                      md:w-[250px]
-                      md:h-[250px]
-                    "
-                  />
-                </div>
-              </div>
-
-              {/* Description */}
-              <p
-                className={`
-                  text-[18px]
-                  leading-[100%]
-                  font-sfpro
-                  tracking-[0%]
-                  text-center
-                  font-normal
-                  ${index % 2 === 0 ? "text-[#2E3138]" : "text-[#512505]"}
-                `}
-              >
-                {service.description}
-              </p>
-            </div>
           </div>
-        ))}
+        </div>
+
+        {/* Description */}
+        <p
+          className={`
+            text-[16px]
+            sm:text-[15px]
+            text-left
+            leading-[1.2]
+
+            font-sfpro
+            font-normal
+
+            
+
+            ${
+              index % 2 === 0
+                ? "text-[#2E3138]"
+                : "text-[#512505]"
+            }
+          `}
+        >
+          {service.description}
+        </p>
       </div>
+    </div>
+  ))}
+</div>
 
       {/* Bottom Buttons */}
       <div className="flex flex-wrap items-center justify-center gap-5 mt-16">
@@ -233,8 +293,11 @@ export default function Services() {
             rounded-[14px]
             border
             border-[#3B2A1F]
+            border-[2px]
             bg-white
             text-[#3B2A1F]
+            font-sfpro
+            
             font-medium
             text-[16px]
             transition-all
@@ -253,12 +316,13 @@ export default function Services() {
             rounded-[14px]
             border-[5px]
             border-[#6C4F3C]
-            bg-gradient-to-b
-            from-[#4B3425]
-            to-[#2B1C14]
+            bg-gradient-to-t
+            from-[#6C4F3C]
+            to-[#2D2017]
             text-white
             text-[16px]
             font-medium
+            font-sfpro
             flex
             items-center
             justify-center
@@ -270,12 +334,12 @@ export default function Services() {
             hover:to-orange-300
           "
         >
-          ✨ Get Started
+           ✦ Get Started
         </button>
       </div>
 
       {/* Newsletter Section */}
-      <div className="max-w-[1440px] mx-auto mt-24 rounded-[32px] bg-[#FFFFFF] px-8 py-8 sm:px-10 lg:px-12 flex flex-col
+      <div className="max-w-[1390px] mx-auto mt-24 rounded-[32px] bg-[#FFFFFF] px-8 py-8 sm:px-10 lg:px-12 flex flex-col
           lg:flex-row
           items-start
           lg:items-center
@@ -356,12 +420,13 @@ export default function Services() {
                 rounded-[12px]
                 border-[4px]
                 border-[#6C4F3C]
-                bg-gradient-to-b
-                from-[#4B3425]
-                to-[#2B1C14]
+                bg-gradient-to-t
+              from-[#6C4F3C]
+              to-[#2D2017]
                 text-white
                 text-[14px]
                 font-medium
+                font-sfpro
                 flex
                 items-center
                 justify-center
@@ -373,7 +438,7 @@ export default function Services() {
                 hover:to-orange-300
               "
             >
-              ✨ Subscribe
+              ✦ Subscribe
             </button>
           </div>
 

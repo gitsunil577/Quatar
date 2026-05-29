@@ -16,7 +16,15 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full bg-[#F7F7F7] py-3 relative z-50">
+    <nav className="w-full bg-[#F7F7F7] py-3 relative z-50 sticky
+    top-0
+    z-50
+    w-full
+   bg-white/10
+    backdrop-blur-md
+    border-b
+    border-white/20
+    ">
 
       {/* Main Container — 3-column grid: logo | links | buttons */}
       <div
@@ -54,8 +62,9 @@ export default function Navbar() {
               href={link.href}
               className="
                 flex items-center gap-1
-                text-[16px] font-light leading-[100%] tracking-[0.01em]
+                text-[13px] font-extralight leading-[100%] tracking-[0.01em]
                 text-[#4B4B4B] transition-all whitespace-nowrap shrink-0
+                font-sfpro
               "
             >
               {link.label}
@@ -67,24 +76,25 @@ export default function Navbar() {
             className="
               flex items-center gap-1 shrink-0
               px-3 py-1 rounded-[8px]
-              bg-white border border-[#E5E5E5] shadow-sm
-              text-[16px] font-light leading-[100%] tracking-[0.01em]
+              bg-white border border-[#F8ECDC] shadow-sm
+              text-[12px] font-semibold leading-[100%] tracking-[0.01em]
               text-[#F97316] hover:shadow-md transition-all duration-300 whitespace-nowrap
+              font-sfpro
             "
           >
             Collaboration
             <Image src="/Frame.svg" width={12} height={12} alt="" />
           </button>
 
-          <Link href="#silicon-oasis" className="text-[16px] font-light text-[#4B4B4B] whitespace-nowrap shrink-0">
+          <Link href="#silicon-oasis" className="text-[13px] font-sfpro font-extralight text-[#4B4B4B] whitespace-nowrap shrink-0">
             Silicon Oasis
           </Link>
 
-          <Link href="#csr" className="text-[16px] font-light text-[#4B4B4B] whitespace-nowrap shrink-0">
+          <Link href="#csr" className="text-[13px] font-extralight fonr-sfpro text-[#4B4B4B] whitespace-nowrap shrink-0">
             CSR
           </Link>
 
-          <Link href="#ai" className="text-[16px] font-light text-[#4B4B4B] whitespace-nowrap shrink-0">
+          <Link href="#ai" className="text-[13px] font-extralight font-sfpro  text-[#4B4B4B] whitespace-nowrap shrink-0">
             AI
           </Link>
         </div>
@@ -100,9 +110,11 @@ export default function Navbar() {
             variant="outline"
             className="
               hidden sm:flex
-              h-[46px] px-5
+              font-sfpro
+              font-semibold
+              h-[46px] px-3 py-1
               rounded-[14px] border-[2px] border-black
-              bg-white text-[16px] text-[#2C2014] font-semibold
+              bg-white text-[14px] text-[#2C2014] font-semibold
               hover:bg-gray-100 transition-all
             "
           >
@@ -112,9 +124,11 @@ export default function Navbar() {
           {/* Sign Up */}
           <Button
             className="
-              h-[46px] px-5
-              rounded-[14px] border-[3px] border-[#6C4F3C]
-              bg-gradient-to-b from-[#655042] to-[#2D1017]
+              h-[46px] px-3
+              font-sfpro
+              font-semibold
+              rounded-[14px] border-[6px] border-[#6C4F3C]
+             bg-gradient-to-t from-[#6C4F3C] to-[#2D2017]
               text-white text-[15px] font-semibold
               hover:border-orange-200
               hover:from-orange-400

@@ -5,16 +5,16 @@ function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="w-full p-0">
+      <section className="w-full p-0 ">
         
         {/* Hero Container */}
         <div
           className="
             relative
-            w-full
+            w-full max-w-[1390px] mx-auto px-6 sm:px-4 lg:px-10
             h-screen
             overflow-hidden
-            rounded-b-[30px]
+            rounded-[50px]
             bg-[#E9EEEE]
           "
         >
@@ -38,10 +38,10 @@ function Hero() {
               absolute
               inset-0
               bg-gradient-to-r
-              from-[#E9EEEE]/95
-              via-[#E9EEEE]/60
-              sm:from-[#E9EEEE]/85
-              sm:via-[#E9EEEE]/35
+              from-[#FFFFFF]/95
+              via-[#FFFFFF]/60
+              sm:from-[#FFFFFF]/85
+              sm:via-[#FFFFFF]/40
               to-transparent
             "
           ></div>
@@ -51,30 +51,20 @@ function Hero() {
 
             {/* Alignment container — identical to navbar:
                 no padding on outer, px lives on the max-w element */}
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+            <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-4 lg:px-10">
 
               {/* Text Content */}
               <div className="w-full max-w-[676px]">
 
                 {/* Heading */}
-                <h1
-                  className="
-                    font-[Helvetica]
-                    font-bold
-                    text-[38px]
-                    sm:text-[52px]
-                    md:text-[64px]
-                    lg:text-[72px]
-                    leading-[1.05]
-                    tracking-[-0.02em]
-                    text-[#312922]
-                    mb-3
-                    md:mb-4
-                    lg:mb-5
-                  "
-                >
-                  12 Doors Open For You
-                </h1>
+                <h1 className="font-[Helvetica] font-bold text-[25px] sm:text-[40px] md:text-[46px] lg:text-[52px] leading-[1.05] tracking-[-0.03em]
+                            text-[#312922]
+                            mb-3
+                            md:mb-4
+                            lg:mb-5"
+              >
+                12 Doors Open For You
+              </h1>
 
                 {/* Paragraph */}
                 <p
@@ -82,9 +72,9 @@ function Hero() {
                     w-full
                     font-inter
                     font-normal
-                    text-[17px]
-                    sm:text-[18px]
-                    md:text-[20px]
+                    text-[10px]
+                    sm:text-[16px]
+                    md:text-[18px]
                     leading-[30px]
                     tracking-[0%]
                     text-[#475467]
@@ -99,13 +89,13 @@ function Hero() {
                   className="
                     mt-5
                     lg:mt-6
-                    h-[54px]
-                    w-[151px]
+                    h-[52px]
+                    w-[135px]
                     gap-3
                     rounded-[14px]
                     border-[5px]
                     border-[#6C4F3C]
-                    bg-gradient-to-b
+                    bg-gradient-to-t
                     from-[#6C4F3C]
                     to-[#2D2017]
                     text-white
@@ -140,11 +130,11 @@ function Hero() {
             controls
             className="
               w-full
-              h-[260px]
-              sm:h-[420px]
-              lg:h-[700px]
+              h-[150px]
+              sm:h-[150px]
+              lg:h-[500px]
               object-cover
-              rounded-[28px]
+              rounded-[40px]
             "
           >
             <source src="/video.mp4" type="video/mp4" />
