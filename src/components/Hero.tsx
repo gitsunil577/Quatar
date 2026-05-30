@@ -11,8 +11,8 @@ function Hero() {
         <div
           className="
             relative
-            w-full max-w-[1390px] mx-auto px-6 sm:px-4 lg:px-10
-            h-screen
+            w-full max-w-[1460px] mx-auto px-6 sm:px-4 lg:px-12
+            h-[638px]
             overflow-hidden
             rounded-[50px]
             bg-[#E9EEEE]
@@ -28,7 +28,8 @@ function Hero() {
             alt="Hero Image"
             className="
               object-cover
-              object-right
+              object-left
+
             "
           />
 
@@ -51,13 +52,13 @@ function Hero() {
 
             {/* Alignment container — identical to navbar:
                 no padding on outer, px lives on the max-w element */}
-            <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-4 lg:px-10">
+            <div className="w-full max-w-[1440px] mx-auto  px-6 sm:px-4 lg:px-17">
 
               {/* Text Content */}
-              <div className="w-full max-w-[676px]">
+              <div className="w-full max-w-[575px]  h-[200px]">
 
                 {/* Heading */}
-                <h1 className="font-[Helvetica] font-bold text-[25px] sm:text-[40px] md:text-[46px] lg:text-[52px] leading-[1.05] tracking-[-0.03em]
+                <h1 className="font-[Helvetica] font-bold text-[25px] sm:text-[40px] md:text-[46px] lg:text-[45px] leading-[1.05] tracking-[-0.03em]
                             text-[#312922]
                             mb-3
                             md:mb-4
@@ -70,6 +71,7 @@ function Hero() {
                 <p
                   className="
                     w-full
+                    pb-6
                     font-inter
                     font-normal
                     text-[10px]
@@ -88,28 +90,35 @@ function Hero() {
                 <Button
                   className="
                     mt-5
-                    lg:mt-6
-                    h-[52px]
+                    lg:mt-4
+                    h-[49px]
                     w-[135px]
                     gap-3
+                    pr-3
                     rounded-[14px]
                     border-[5px]
                     border-[#6C4F3C]
+                    border-b-[#2D1017]/80
                     bg-gradient-to-t
-                    from-[#6C4F3C]
+                    from-[#2D2017]
                     to-[#2D2017]
                     text-white
-                    text-[18px]
-                    font-semibold
+                    text-[16px]
+                    align-center
+                    font-medium
+                    font-sfpro
                     shadow-[0_6px_16px_rgba(0,0,0,0.22)]
-                    hover:border-orange-200
-                    hover:from-orange-400
+                   
+                    hover:border-[#FFBA6F]
+                    hover:border-t-[#FFBA6F]/70
+                    hover:from-[#e3874a]
                     hover:to-orange-300
                     transition-all
                     duration-300
                   "
                 >
-                  ✦ Apply Now
+                <span><Image src="/Star_icon.svg" alt="star icon"  width={22} height={22} quality={100}/></span>
+                 Apply Now
                 </Button>
 
               </div>
@@ -122,7 +131,7 @@ function Hero() {
       <section className="py-8">
 
         {/* Identical to navbar: px on the max-w container, not the outer section */}
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="w-full max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-0.5 rounded-[40px] ">
           <video
             autoPlay
             loop

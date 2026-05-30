@@ -4,24 +4,25 @@ import { Button } from "./ui/button";
 
 function Footer() {
   return (
-    <footer className="bg-[#FFFFFF] px-4 sm:px-6 lg:px-10 pb-10">
+    <footer className="bg-[#FFFFFF] px-4 sm:px-6 lg:px-0 pb-10 py-9  w-[1460px] mx-auto
+        ">
       
       {/* Main Footer */}
       <div
         className="
-          w-full
-          max-w-[1390px]
-          max-h-[580px]
+          
+          w-[1460px]
           mx-auto
+          max-h-[580px]
+          
           rounded-[40px]
           lg:rounded-[54px]
-          border
           border-[#1A1A1A]
           bg-[#121211]
           overflow-hidden
           px-4
           sm:px-6
-          lg:px-8
+          lg:px-4
           py-6
         "
       >
@@ -102,10 +103,11 @@ function Footer() {
                   px-4
                   rounded-[10px]
                   border-[5px]
-                  border-[#6C4F3C]
-                 bg-gradient-to-t
-                from-[#6C4F3C]
-                 to-[#2D2017]
+                 border-[#6C4F3C]
+                  border-b-[#2D1017]/80
+                  bg-gradient-to-t
+                  from-[#2D2017]
+                  to-[#2D2017]
                   text-white
                   text-[16px]
                   font-medium
@@ -115,9 +117,10 @@ function Footer() {
                   justify-center
                   transition-all
                   duration-300
-                  hover:border-orange-300
-                  hover:from-orange-500
-                  hover:to-orange-600
+                  hover:border-[#FFBA6F]
+                  hover:border-t-[#FFBA6F]/70
+                  hover:from-[#e3874a]
+                  hover:to-orange-300
                 "
               >
                 ✦ Get Started

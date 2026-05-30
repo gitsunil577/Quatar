@@ -20,7 +20,7 @@ export default function Navbar() {
     top-0
     z-50
     w-full
-   bg-white/10
+    bg-white/50
     backdrop-blur-md
     border-b
     border-white/20
@@ -29,15 +29,15 @@ export default function Navbar() {
       {/* Main Container — 3-column grid: logo | links | buttons */}
       <div
         className="
-          max-w-[1440px]
+          max-w-[1460px]
           mx-auto
-          px-4
-          sm:px-6
-          lg:px-10
+          px-1
+          sm:px-4
+          lg:px-3
           grid
           grid-cols-[auto_1fr_auto]
           items-center
-          h-[54px]
+          h-[50px]
           gap-4
         "
       >
@@ -46,8 +46,8 @@ export default function Navbar() {
         <Link href="/" className="flex items-center shrink-0">
           <Image
             src="/Logo.png"
-            width={44}
-            height={44}
+            width={40}
+            height={40}
             alt="Website Logo"
             className="object-contain"
           />
@@ -127,12 +127,18 @@ export default function Navbar() {
               h-[46px] px-3
               font-sfpro
               font-semibold
-              rounded-[14px] border-[6px] border-[#6C4F3C]
-             bg-gradient-to-t from-[#6C4F3C] to-[#2D2017]
-              text-white text-[15px] font-semibold
-              hover:border-orange-200
-              hover:from-orange-400
+              rounded-[14px] border-[5px] border-[#6C4F3C]
+              border-b-[#41252d]
+              bg-gradient-to-r from-[#2D2017] to-[#2D2017]
+              text-white text-[15px] font-medium
+              shadow-[0_6px_16px_rgba(0,0,0,0.22)]
+              
+              hover:border-[#FFBA6F]
+              hover:border-t-[#FFBA6F]/70
+              hover:from-[#e3874a]
               hover:to-orange-300
+              transition-all
+              duration-300
             "
           >
             Sign up
